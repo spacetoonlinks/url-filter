@@ -123,7 +123,8 @@ button {
     <label for="server-8-urls">Server 8 URLs:</label>
     <br>
     <textarea id="server-8-urls" rows="5" cols="150"></textarea><br>
-    <button onclick="copyserver8textarea()">Copy</button><br><br>
+    <button onclick="copyserver8textarea()">Copy</button>
+    <button onclick="reset()">Reset</button><br><br>
     <diV>
     <script>
       function filterUrls() {
@@ -183,6 +184,12 @@ button {
         // Copy to the clipboard
         document.execCommand("copy");
       }
+      function reset() {
+      document.getElementById("original-url").value = "";
+      document.getElementById("server-6-urls").value = "";
+      document.getElementById("server-7-urls").value = "";
+      document.getElementById("server-8-urls").value = "";
+    }
     </script>
   </body>
 </html>
